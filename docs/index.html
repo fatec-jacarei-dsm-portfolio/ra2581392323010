@@ -1,353 +1,303 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <title>André</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./static/css/style.css">
+    <title>André Flávio de Oliveira</title>
     <link rel="shortcut icon" href="./static/imgs/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .gradient-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.3));
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .text-effect {
+            border-right: 2px solid #ffffff;
+            animation: blink 0.7s step-end infinite;
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        .menu-dropdown {
+            display: none;
+        }
+        .menu-dropdown.show {
+            display: flex;
+        }
+        .publicacao-imagem {
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
-
-<body background="./static/imgs/**">
-    <header>
-        <nav class="nav-links">
-            <a class="left-link" href="#inicio">André</a>
-            <!-- Ícone do menu hambúrguer -->
-            <i class="menu-icon fa-solid fa-bars"></i>
-            <!-- Menu dropdown -->
-            <div class="menu-dropdown">
-                <a href="#formacao">Formação</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#publicacoes">Publicações</a>
-                <a href="#complementar">Complementar</a>
-                <a href="#contato">Contato</a>
-            </div>
-            <!-- Links principais -->
-            <div class="right-links">
-                <a href="#formacao">Formação</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#publicacoes">Publicações</a>
-                <a href="#complementar">Complementar</a>
-                <a href="#contato">Contato</a>
+<body class="bg-gray-100">
+    <header class="bg-gray-900 text-white sticky top-0 z-50">
+        <nav class="container mx-auto flex items-center justify-between p-4">
+            <a href="#inicio" class="text-2xl font-bold">André</a>
+            <i class="menu-icon fa-solid fa-bars md:hidden cursor-pointer"></i>
+            <div class="menu-dropdown flex-col md:flex md:flex-row gap-4 absolute md:static top-16 left-0 bg-gray-900 w-full md:w-auto p-4 md:p-0 hidden">
+                <a href="#formacao" class="hover:text-blue-400">Formação</a>
+                <a href="#projetos-fatec" class="hover:text-blue-400">Projetos da FATEC</a>
+                <a href="#publicacoes" class="hover:text-blue-400">Publicações</a>
+                <a href="#complementar" class="hover:text-blue-400">Complementar</a>
+                <a href="#contato" class="hover:text-blue-400">Contato</a>
             </div>
         </nav>
     </header>
 
-    <section id="inicio">
+    <section id="inicio" class="relative h-screen flex items-center justify-center bg-contain bg-center bg-no-repeat" style="background-image: url('./static/imgs/firsImage.png')">
         <div class="gradient-overlay"></div>
-        <div class="center-text">
-            <h1>André Flávio de Oliveira</h1>
-            <p class="text-effect">Gentileza em prol do desenvolvimento</p>
+        <div class="text-center z-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">André Flávio de Oliveira</h1>
+            <p class="text-effect text-lg md:text-xl text-white">Gentileza em prol do desenvolvimento</p>
+            <a href="#resumo" class="mt-8 inline-flex items-center text-white hover:text-blue-400">
+                <span class="mr-2">Resumo</span>
+                <i class="fa-solid fa-angle-down"></i>
+            </a>
         </div>
-        <a href="#resumo" class="container-seta">
-            <p id="titleProj">Resumo</p>
-            <i class="fa-solid fa-angle-down"></i>
-        </a>
     </section>
 
-    <section id="resumo" class="section">
-        <h2>Resumo</h2>
-        <div class="centralizar">
-            <div class="resumo-content">
-                <div class="resumo-foto">
-                    <img src="./static/imgs/foto.jpg" alt="Foto de André Flávio de Oliveira">
+    <section id="resumo" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Resumo</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-full md:w-1/3">
+                    <img src="./static/imgs/foto.jpg" alt="Foto de André Flávio de Oliveira" class="rounded-full w-48 h-48 mx-auto object-cover">
                 </div>
-                <div class="resumo-texto">
-                    <p>
-                        Sou estudante em Desenvolvimento de Software pela FATEC e atualmente curso o 4° Semestre e atuo como bolsista de Iniciação Científica.
-                        
+                <div class="w-full md:w-2/3 text-gray-700">
+                    <p class="mb-4">
+                        Sou estudante de Desenvolvimento de Software pela FATEC, cursando o 4º semestre, e atuo como bolsista de Iniciação Científica.
                     </p>
-                    <br>
-                    <p>
-                        Tenho amplo experiência no desenvolvimento de software para o ambito de produtos tecnológicos e pesquisa ciêntifica, obstinado por aprender
-                        novas técnologias e conhecimento para aplicar ao mundo real com o objetivo de transformar e solucionar problemas. Tenho fascinio por psicologia,
-                        agro e computação, onde aplico meus conhecimentos com o objetivo transformador de otimizar o simples para escalar em soluções complexas.
+                    <p class="mb-4">
+                        Tenho ampla experiência no desenvolvimento de software para produtos tecnológicos e pesquisa científica, com paixão por aprender novas tecnologias e aplicar conhecimentos no mundo real, transformando e solucionando problemas. Sou fascinado por psicologia, agropecuária e computação, onde combino meus conhecimentos para otimizar soluções complexas a partir de ideias simples.
                     </p>
-                    <br>
                     <p>
-                        Minha trajetória é guiada propósito de aliar o desenvolvimento e inocação ao um ambiente acolhedor gerando soluções inovadoras e transformando vidas.
+                        Minha trajetória é guiada pelo propósito de aliar desenvolvimento e inovação a um ambiente acolhedor, gerando soluções inovadoras que transformam vidas.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <section id="formacao" class="section">
-        <h2>Formação</h2>
-        <div class="centralizar">
-            <div class="formacao-detalhes">
-                <div class="formacao-item">
-                    <div>
-                        <h3>Técnico em Agropecuária</h3>
-                        <p><strong>Instituição:</strong> ETEC CÔNEGO JOSÉ BENTO</p>
-                        <p><strong>Período:</strong> 2020 - 2021</p>
-                        <p><strong>Título:</strong> Ensino Técnico Aliado ao Ensino Médio em Agropecuária </p>
+    <section id="formacao" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Formação</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-start gap-6">
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2">Direito</h3>
+                        <p class="text-gray-700"><strong>Instituição:</strong> Universidade de Taubaté</p>
+                        <p class="text-gray-700"><strong>Período:</strong> 2004 - 2008</p>
+                        <p class="text-gray-700"><strong>Título:</strong> Bacharel em Direito</p>
                     </div>
-                    <div class="formacao-imagem">
-                        <img src="static/imgs/**" alt="Imagem Técnico em Agropecuária">
+                    <div class="w-full md:w-1/3">
+                        <img src="./static/imgs/foto-direito.png" alt="Imagem Bacharel em Direito" class="rounded-lg w-full h-40 object-cover">
                     </div>
                 </div>
-                <div class="formacao-item">
-                    <div>
-                        <h3>Graduação em Desenvolvimento de Software</h3>
-                        <p><strong>Instituição: Fatec Professor Francisco de Moura</strong> </p>
-                        <p><strong>Período: 2023 - 2026</strong> </p>
-                        <p><strong>Título:</strong>Técnicas de processamento de imagens e inteligência artificial aplicadas à detecção e descrição
-de área queimada.</p>
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row items-start gap-6">
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2">Graduação em Desenvolvimento de Software Multiplataforma</h3>
+                        <p class="text-gray-700"><strong>Instituição:</strong> FATEC Professor Francisco de Moura</p>
+                        <p class="text-gray-700"><strong>Período:</strong> 2023 - 2026</p>
+                        <p class="text-gray-700"><strong>Título:</strong> Curso Tecnológico com Fundação Sólida em Práticas das Tendências Tecnológicas</p>
                     </div>
-                    <div class="formacao-imagem">
-                        <img src="static/imgs/**" alt="Imagem Graduação">
+                    <div class="w-full md:w-1/3">
+                        <img src="./static/imgs/CouserDSM.png" alt="Imagem Graduação" class="rounded-lg w-full h-40 object-cover">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projetos" class="section">
-        <h2>Projetos</h2>
-        <div class="carrossel">
-            <div class="projeto-card" data-descricao-id="desc-queimadas">
-                <div class="projeto-imagem" style="background-image: url('static/imgs/**');"></div>
-                <h3>Programa Queimas DescrEVE</h3>
-                <p>INPE - Instituto Nacional de Pesquisas Espaciais<br>Função: Desenvolvedor de Software - Biomas BR CNPq</p>
-            </div>
-            <div class="projeto-card" data-descricao-id="desc-lsst">
-                <div class="projeto-imagem" style="background-image: url('static/imgs/**');"></div>
-                <h3>Iniciação Científica</h3>
-                <p>Técnicas de Processamento de Imagens e Inteligência Artificial Aplicadas à Detecção e Descrição
-de Área Queimada.<br>Pesquisador de Iniciação Ciêntifica - CNPq</p>
-            </div>
-        </div>
-        <div class="descricao-projeto-expandida">
-            <p>
-                O Programa Queimas DescrEVE é uma iniciativa do INPE voltada para o monitoramento de queimadas.
-                Este projeto processa imagens do satélite e depois gera estátitica, fornecendo dados de Descritor e Evento de Fogo para monitorar incêndios no Brasil.
-            </p>
-            <p>
-                <strong>Minha colaboração:</strong> Desenvolvedor de Software do DescrEVE.
-                <br><strong>Contribuições:</strong> Desenvolvimento de software para Geração de Descritor e responsável por criação de query e API's em um arquitetura 
-                de microserviços para disponibizar por meio de API's informações de Descritor de Fogo por Região e Evento de Fogo por Região para todo o Brasil.
-            </p>
-            <a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target="_blank">Visite o site oficial</a>
-        </div>
-    </section>
-
-    <div id="descricao-detalhes" style="display: none;">
-        <div id="desc-queimadas">
-            <h3>Programa Queimadas DescrEVE</h3>
-            <p>
-                O Programa Queimas DescrEVE é uma iniciativa do INPE voltada para o monitoramento de queimadas.
-                Este projeto processa imagens do satélite e depois gera estátitica, fornecendo dados de Descritor e Evento de Fogo para monitorar incêndios no Brasil.
-            </p>
-            </p>
-            <p>
-                <strong>Minha colaboração:</strong> Atuo como Desenvolvedor de Software do DescrEVE.
-                <br><strong>Contribuições:</strong> Desenvolvimento de software para Geração de Descritor e responsável por criação de query e API's em um arquitetura 
-                de microserviços para disponibizar por meio de API's informações de Descritor de Fogo por Região e Evento de Fogo por Região para todo o Brasil.
-            </p>
-            <a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target="_blank">Visite o site oficial</a>
-        </div>
-
-        <div id="desc-lsst">
-            <h3>Iniciação Científica</h3>
-            <p>
-                A pesquisa foi voltada para processamentode focos de fogo detectado por satélites e consecutivamente processamento para análise dos atributos e geração de descritor de
-                forma clara e objetiva, de modo a substituição do atual modelo tabular de exibição dessa informação na plataforma do INPE.
-            </p>
-            <p>
-                <strong>Minha colaboração:</strong> Pesquisador de Iniciação Ciêntifica.
-                <br><strong>Contribuições:</strong> Desenvolver Pesquisa e Exemplo prático por meio de API do Descritor de Fogo no Brasil.
-            </p>
-            <a href="https://terrabrasilis.dpi.inpe.br/queimadas/situacao-atual/estatisticas/estatisticas_estados/" target="_blank">Visite o site oficial</a>
-        </div>
-    </div>
-
-    <section id="projetos-fatec" class="section">
-        <h2>Projetos da Fatec</h2>
-        <div class="carrossel">
-            <div class="publicacao-card" data-descricao-id="desc-fatec1">
-                <div class="publicacao-imagem"
-                    style="background-image: url('https://fatec-sjc-dsm-portfolio.github.io/ra1461392211041/static/academic/**');">
+    <section id="projetos-fatec" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Projetos da FATEC</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="publicacao-card bg-white p-4 rounded-lg shadow-md cursor-pointer flex flex-col items-center" data-descricao-id="desc-fatec1">
+                    <div class="publicacao-imagem h-52 w-full rounded-lg mb-4" style="background-image: url('./static/academic/firstSemester.png')"></div>
+                    <h3 class="text-lg font-bold text-center">Tema Primeiro Semestre</h3>
+                    <p class="text-center text-gray-600">Equipe FATEC - Projeto 2023/2</p>
                 </div>
-                <h3>Tema Primeiro Semestre</h3>
-                <p>Equipe Fatec - Projeto 2023/2</p>
-            </div>
-            <div class="publicacao-card" data-descricao-id="desc-fatec2">
-                <div class="publicacao-imagem"
-                    style="background-image: url('https://fatec-sjc-dsm-portfolio.github.io/ra1461392211041/static/academic/**');">
+                <div class="publicacao-card bg-white p-4 rounded-lg shadow-md cursor-pointer flex flex-col items-center" data-descricao-id="desc-fatec2">
+                    <div class="publicacao-imagem h-52 w-full rounded-lg mb-4" style="background-image: url('./static/academic/secondSemester.png')"></div>
+                    <h3 class="text-lg font-bold text-center">Tema Segundo Semestre</h3>
+                    <p class="text-center text-gray-600">Equipe FATEC - Projeto 2024/1</p>
                 </div>
-                <h3>Tema Segundo Semestre</h3>
-                <p>Equipe Fatec - Projeto 2024/1</p>
-            </div>
-            <div class="publicacao-card" data-descricao-id="desc-fatec3">
-                <div class="publicacao-imagem"
-                    style="background-image: url('https://fatec-sjc-dsm-portfolio.github.io/ra1461392211041/static/academic/**');">
+                <div class="publicacao-card bg-white p-4 rounded-lg shadow-md cursor-pointer flex flex-col items-center" data-descricao-id="desc-fatec3">
+                    <div class="publicacao-imagem h-52 w-full rounded-lg mb-4" style="background-image: url('./static/academic/thirdSemester.png')"></div>
+                    <h3 class="text-lg font-bold text-center">Tema Terceiro Semestre</h3>
+                    <p class="text-center text-gray-600">Equipe FATEC - Projeto 2024/2</p>
                 </div>
-                <h3>Tema Terceiro Semestre</h3>
-                <p>Equipe Fatec - Projeto 2024/2</p>
-            </div>
-            <div class="publicacao-card" data-descricao-id="desc-fatec4">
-                <div class="publicacao-imagem"
-                    style="background-image: url('https://fatec-sjc-dsm-portfolio.github.io/ra1461392211041/static/academic/**');">
+                <div class="publicacao-card bg-white p-4 rounded-lg shadow-md cursor-pointer flex flex-col items-center" data-descricao-id="desc-fatec4">
+                    <div class="publicacao-imagem h-52 w-full rounded-lg mb-4" style="background-image: url('./static/academic/fourthSemester.png')"></div>
+                    <h3 class="text-lg font-bold text-center">Tema Quarto Semestre</h3>
+                    <p class="text-center text-gray-600">Equipe FATEC - Projeto 2024/2</p>
                 </div>
-                <h3>Tema Quarto Semestre</h3>
-                <p>Equipe Fatec - Projeto 2024/2</p>
             </div>
-        </div>
-        <div class="descricao-publicacao-expandida">
-            <h3>Primeiro Semestre</h3>
-            <p>
-                Primeiro Semestre.
-            </p>
-            <p>
-                <strong>Tecnologias utilizadas:</strong> **.
-            </p>
-        </div>
-    </section>
-
-    <div id="descricao-detalhes" style="display: none;">
-        <div id="desc-fatec1">
-            <h3>Primeiro Semestre</h3>
-            <p>Primeiro Semestre. </p>
-        </div>
-        <div id="desc-fatec2">
-            <h3>Segundo Semestre</h3>
-            <p>Segundo Semestre.</p>
-        </div>
-        <div id="desc-fatec3">
-            <h3>Terceiro Semestre</h3>
-            <p>Terceiro Semestre.</p>
-        </div>
-        <div id="desc-fatec4">
-            <h3>Quarto Semestre</h3>
-            <p>Quarto Semestre.</p>
-        </div>
-    </div>
-
-
-    <section id="publicacoes" class="section">
-        <h2>Publicações</h2>
-        <div class="carrossel">
-            <div class="publicacao-card" data-descricao-id="desc-publicacao1">
-                <div class="publicacao-imagem" style="background-image: url('static/imgs/artigo1.png');"></div>
-                <h3>TÍTULO DE ALGO QUE EU FIZ</h3>
-                <p>Autor:XXXXXXXXXXXXXXXXXXXXXXXXXXXX </p>
+            <div class="descricao-publicacao-expandida mt-8 bg-white p-6 rounded-lg shadow-md">
+                <p>Selecione um projeto para ver os detalhes.</p>
             </div>
         </div>
     </section>
 
-    <div id="descricao-detalhes" style="display: none;">
-        <div id="desc-publicacao1">
-            <h3>Tema IC</h3>
-            <p>
-                Tema IC.
-            </p>
-            Tema Ic.
+    <section id="publicacoes" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Publicações</h2>
+            <div class="grid grid-cols-1 gap-8">
+                <div class="publicacao-card bg-gray-50 p-6 rounded-lg shadow-md cursor-pointer" data-descricao-id="desc-publicacao1">
+                    <div class="publicacao-imagem h-48 rounded-lg mb-4" style="background-image: url('./static/imgs/artigo1.png')"></div>
+                    <h3 class="text-xl font-bold">Iniciação Científica</h3>
+                    <p>Autor: André Flávio de Oliveira, Guilherme dos Santos Benedito, Fabrício Galende Marques, Fabiano Morelli</p>
+                </div>
+            </div>
+            <div class="descricao-publicacao-expandida mt-8 bg-gray-50 p-6 rounded-lg shadow-md">
+                <p>Selecione uma publicação para ver os detalhes.</p>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <section id="complementar" class="section">
-        <h2>Atividades Complementares</h2>
-        <div class="centralizar">
-            <p>Outras iniciativas e contribuições importantes.</p>
-            <div class="complementar-container">
-                <div class="complementar-item">
-                    <div class="complementar-icone">
-                        <a href="#" target="_blank">
-                            <i class="fa-solid fa-book"></i>
-                        </a>
+    <section id="complementar" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Atividades Complementares</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="complementar-item bg-white p-6 rounded-lg shadow-md flex items-center gap-4">
+                    <div class="complementar-icone text-3xl text-blue-600">
+                        <i class="fa-solid fa-book"></i>
                     </div>
                     <div class="complementar-detalhes">
-                        <h3>**</h3>
-                        <p>**.</p>
+                        <h3 class="text-lg font-bold">3º Science & Business Connection</h3>
+                        <p>Trabalho Científico no 3º Science & Business Connection.</p>
                     </div>
                 </div>
-                <div class="complementar-item">
-                    <div class="complementar-icone">
-                        <a href="#" target="_blank">
-                            <i class="fa-solid fa-map-marked-alt"></i>
-                        </a>
+                <div class="complementar-item bg-white p-6 rounded-lg shadow-md flex items-center gap-4">
+                    <div class="complementar-icone text-3xl text-blue-600">
+                        <i class="fa-solid fa-map-marked-alt"></i>
                     </div>
                     <div class="complementar-detalhes">
-                        <h3>Oficina de Trabalho Base de Informações Georreferenciadas</h3>
-                        <p>Carga horária: 50h. Brazil Data Cube, Instituto Nacional de Pesquisas Espaciais (INPE),
-                            Brasil. 2024.</p>
+                        <h3 class="text-lg font-bold">Oficina de Trabalho Base de Informações Georreferenciadas</h3>
+                        <p>Carga horária: 50h. Brazil Data Cube, INPE, Brasil. 2024.</p>
                     </div>
                 </div>
-                <div class="complementar-item">
-                    <div class="complementar-icone">
-                        <a href="#" target="_blank">
-                            <i class="fa-solid fa-pencil-ruler"></i>
-                        </a>
+                <div class="complementar-item bg-white p-6 rounded-lg shadow-md flex items-center gap-4">
+                    <div class="complementar-icone text-3xl text-blue-600">
+                        <i class="fa-solid fa-pencil-ruler"></i>
                     </div>
                     <div class="complementar-detalhes">
-                        <h3>UX Básico</h3>
-                        <p>Carga horária: 240h. Faculdade de Tecnologia do Estado de São Paulo (FATEC), Brasil. 2024.
-                        </p>
+                        <h3 class="text-lg font-bold">UX Básico</h3>
+                        <p>Carga horária: 240h. FATEC, Brasil. 2024.</p>
                     </div>
                 </div>
-                <div class="complementar-item">
-                    <div class="complementar-icone">
-                        <a href="#" target="_blank">
-                            <i class="fa-solid fa-code"></i>
-                        </a>
+                <div class="complementar-item bg-white p-6 rounded-lg shadow-md flex items-center gap-4">
+                    <div class="complementar-icone text-3xl text-blue-600">
+                        <i class="fa-solid fa-code"></i>
                     </div>
                     <div class="complementar-detalhes">
-                        <h3>Design Patterns Básico</h3>
-                        <p>Carga horária: 240h. Faculdade de Tecnologia do Estado de São Paulo (FATEC), Brasil. 2024.
-                        </p>
+                        <h3 class="text-lg font-bold">Design Patterns Básico</h3>
+                        <p>Carga horária: 240h. FATEC, Brasil. 2024.</p>
                     </div>
                 </div>
-                <div class="complementar-item">
-                    <div class="complementar-icone">
-                        <a href="#" target="_blank">
-                            <i class="fa-solid fa-desktop"></i>
-                        </a>
+                <div class="complementar-item bg-white p-6 rounded-lg shadow-md flex items-center gap-4">
+                    <div class="complementar-icone text-3xl text-blue-600">
+                        <i class="fa-solid fa-desktop"></i>
                     </div>
                     <div class="complementar-detalhes">
-                        <h3>Front-End Básico</h3>
-                        <p>Carga horária: 240h. Faculdade de Tecnologia do Estado de São Paulo (FATEC), Brasil. 2023.
-                        </p>
+                        <h3 class="text-lg font-bold">Front-End Básico</h3>
+                        <p>Carga horária: 240h. FATEC, Brasil. 2023.</p>
                     </div>
                 </div>
-                <div class="complementar-item">
-                    <div class="complementar-icone">
-                        <a href="#" target="_blank">
-                            <i class="fa-solid fa-laptop-code"></i>
-                        </a>
+                <div class="complementar-item bg-white p-6 rounded-lg shadow-md flex items-center gap-4">
+                    <div class="complementar-icone text-3xl text-blue-600">
+                        <i class="fa-solid fa-laptop-code"></i>
                     </div>
                     <div class="complementar-detalhes">
-                        <h3>Desenvolvedor Front-End</h3>
-                        <p>Carga horária: 640h. Faculdade de Tecnologia do Estado de São Paulo (FATEC), Brasil. 2024.
-                        </p>
+                        <h3 class="text-lg font-bold">Desenvolvedor Front-End</h3>
+                        <p>Carga horária: 640h. FATEC, Brasil. 2024.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <section id="contato" class="section">
-        <h2>Contato</h2>
-        <div class="centralizar">
-            <p>Entre em contato ou acesse mais sobre meu trabalho:</p>
-            <div class="redes">
-                <a href="mailto:13demaio198179@gmail.com" target="_blank">
+    <section id="contato" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Contato</h2>
+            <p class="mb-4">Entre em contato ou acesse mais sobre meu trabalho:</p>
+            <div class="flex justify-center gap-6">
+                <a href="mailto:andreflavio.oliveira@gmail.com" target="_blank" class="text-3xl text-blue-600 hover:text-blue-800">
                     <i class="fa-solid fa-envelope"></i>
                 </a>
-                <a href="https://github.com/andreflavio" target="_blank">
+                <a href="https://github.com/andreflavio" target="_blank" class="text-3xl text-blue-600 hover:text-blue-800">
                     <i class="fa-brands fa-github"></i>
                 </a>
-              
+                <a href="https://www.instagram.com/andreflavio" target="_blank" class="text-3xl text-blue-600 hover:text-blue-800">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="http://lattes.cnpq.br/andre_flavio" target="_blank" class="text-3xl text-blue-600 hover:text-blue-800">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </a>
             </div>
         </div>
     </section>
 
+    <div id="descricao-detalhes" class="hidden">
+        <div id="desc-fatec1">
+            <h3 class="text-xl font-bold">Primeiro Semestre</h3>
+            <p>
+                <strong>Projeto: Plataforma Educacional sobre Metodologia Ágil SCRUM</strong><br><br>
+                Este foi meu primeiro projeto como <em>Scrum Master</em>, aplicando conhecimentos em gerenciamento de projetos.<br>
+                O desafio consistiu no desenvolvimento de uma aplicação web interativa para ensinar os fundamentos da metodologia ágil SCRUM.<br><br>
+                A plataforma oferece conteúdo teórico e atividades práticas, com emissão de certificado personalizado.<br><br>
+                <strong>Tecnologias utilizadas:</strong> JavaScript, HTML, CSS, GitHub, GitHub Pages.
+            </p>
+        </div>
+        <div id="desc-fatec2">
+            <h3 class="text-xl font-bold">Segundo Semestre</h3>
+            <p>
+                <strong>Projeto: Sistema Web para Manipulação de Projetos de Mapeamento</strong><br><br>
+                Desenvolvido como Desenvolvedor de Software na FATEC, o projeto criou uma aplicação web para gerenciamento de projetos de mapeamento.<br>
+                O sistema oferece funcionalidades para registrar, editar e visualizar projetos de forma estruturada.<br><br>
+                <strong>Tecnologias utilizadas:</strong> TypeScript, PostgreSQL com PostGIS, HTML.
+            </p>
+        </div>
+        <div id="desc-fatec3">
+            <h3 class="text-xl font-bold">Terceiro Semestre</h3>
+            <p>
+                <strong>Projeto: Aplicativo de Monitoramento Nutricional</strong><br><br>
+                Desenvolvido como Desenvolvedor de Software na FATEC, o aplicativo monitora a ingestão diária de calorias e nutrientes.<br>
+                Combina funcionalidades práticas com uma interface intuitiva para acompanhamento da dieta.<br><br>
+                <strong>Tecnologias utilizadas:</strong> Node.js, TS-Node.js, MongoDB, TypeScript, React, Trello, Kanban.
+            </p>
+        </div>
+        <div id="desc-fatec4">
+            <h3 class="text-xl font-bold">Quarto Semestre</h3>
+            <p>
+                <strong>Projeto: Aplicativo de Monitoramento via Dispositivo IoT</strong><br><br>
+                Desenvolvido como Desenvolvedor de Software na FATEC, o aplicativo monitora dados coletados por um dispositivo IoT.<br>
+                Integra hardware e software para monitoramento em tempo real.<br><br>
+                <strong>Tecnologias utilizadas:</strong> Node.js, TS-Node.js, MongoDB, TypeScript, React, React Native, Android, iOS, C++, Trello, Kanban.
+            </p>
+        </div>
+        <div id="desc-publicacao1">
+            <h3 class="text-xl font-bold">Iniciação Científica</h3>
+            <p>
+                Publicação relacionada à pesquisa em processamento de imagens e inteligência artificial para detecção de áreas queimadas.
+            </p>
+            <p>
+                <strong>Autor:</strong> André Flávio de Oliveira, Guilherme dos Santos Benedito, Fabrício Galende Marques, Fabiano Morelli.
+            </p>
+        </div>
+    </div>
 
     <script>
         function typeWrite(elemento) {
@@ -357,7 +307,6 @@ de Área Queimada.<br>Pesquisador de Iniciação Ciêntifica - CNPq</p>
             letras.forEach((letra, i) => {
                 setTimeout(() => {
                     elemento.textContent += letra;
-
                     if (i === letras.length - 1) {
                         setTimeout(() => {
                             elemento.style.animation = 'none';
@@ -368,82 +317,35 @@ de Área Queimada.<br>Pesquisador de Iniciação Ciêntifica - CNPq</p>
             });
         }
 
-        const titulo = document.querySelector('.text-effect');
-        typeWrite(titulo);
-        document.querySelectorAll('.projeto-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const descricaoId = card.getAttribute('data-descricao-id');
-                const descricaoDetalhada = document.querySelector(`#descricao-detalhes #${descricaoId}`);
-                const descricaoContainer = document.querySelector('.descricao-projeto-expandida');
-
-                // Substituir conteúdo da descrição expandida
-                if (descricaoDetalhada) {
-                    descricaoContainer.innerHTML = descricaoDetalhada.innerHTML;
-                } else {
-                    descricaoContainer.innerHTML = "<p>Detalhes indisponíveis para este projeto.</p>";
-                }
-            });
-        });
-
-        document.querySelectorAll('.publicacao-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const descricaoId = card.getAttribute('data-descricao-id');
-                const descricaoDetalhada = document.querySelector(`#descricao-detalhes #${descricaoId}`);
-                const descricaoContainer = document.querySelector('.descricao-publicacao-expandida');
-
-                if (descricaoDetalhada) {
-                    descricaoContainer.innerHTML = descricaoDetalhada.innerHTML;
-                } else {
-                    descricaoContainer.innerHTML = "<p>Detalhes indisponíveis para esta publicação.</p>";
-                }
-            });
-        });
-
         function handleCardClick(cardSelector, descriptionSelector) {
             document.querySelectorAll(cardSelector).forEach(card => {
                 card.addEventListener('click', () => {
                     const descricaoId = card.getAttribute('data-descricao-id');
                     const descricaoDetalhada = document.querySelector(`#descricao-detalhes #${descricaoId}`);
                     const descricaoContainer = document.querySelector(descriptionSelector);
-
-                    if (descricaoDetalhada) {
-                        descricaoContainer.innerHTML = descricaoDetalhada.innerHTML;
-                    } else {
-                        descricaoContainer.innerHTML = "<p>Detalhes indisponíveis para este item.</p>";
-                    }
+                    descricaoContainer.innerHTML = descricaoDetalhada ? descricaoDetalhada.innerHTML : "<p>Detalhes indisponíveis para este item.</p>";
                 });
             });
         }
 
-        // Ativação do clique para projetos Fatec
-        handleCardClick('.publicacao-card', '.descricao-publicacao-expandida');
-
-        // Exemplo adicional: se precisar usar em outro contexto
-        handleCardClick('.projeto-card', '.descricao-projeto-expandida');
-
-
         document.addEventListener('DOMContentLoaded', () => {
             const menuIcon = document.querySelector('.menu-icon');
             const menuDropdown = document.querySelector('.menu-dropdown');
+            const titulo = document.querySelector('.text-effect');
+            typeWrite(titulo);
 
             menuIcon.addEventListener('click', () => {
-                // Alterna a classe "show" para exibir ou ocultar o menu
-                if (menuDropdown.classList.contains('show')) {
-                    menuDropdown.classList.remove('show'); // Fecha o menu
-                } else {
-                    menuDropdown.classList.add('show'); // Abre o menu
-                }
+                menuDropdown.classList.toggle('show');
             });
 
-            // Fecha o menu ao clicar fora dele
             document.addEventListener('click', (event) => {
                 if (!menuDropdown.contains(event.target) && !menuIcon.contains(event.target)) {
                     menuDropdown.classList.remove('show');
                 }
             });
-        });
 
+            handleCardClick('.publicacao-card', '.descricao-publicacao-expandida');
+        });
     </script>
 </body>
-
 </html>

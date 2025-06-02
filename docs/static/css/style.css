@@ -29,7 +29,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url('../imgs/galaxia.png') no-repeat center center;
+    background: url('../imgs/firsImage.png') no-repeat center center;
     /* Alinha a imagem */
     background-size: cover;
     /* Garante que a imagem cobre toda a tela */
@@ -42,7 +42,10 @@ html {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
+ul {
+  margin-top: 20px;     /* Espaço acima da lista */
+  padding-left: 20px;   /* Recuo para os marcadores */
+}
 #inicio .gradient-overlay {
     position: absolute;
     top: 0;
