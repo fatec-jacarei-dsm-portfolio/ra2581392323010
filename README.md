@@ -1,7 +1,11 @@
-# Meu RA: 2581392323004
-Portifólio do Samuel Lucas Vieira de Melo
+# Meu RA: [2581392323010](https://github.com/fatec-jacarei-dsm-portfolio/ra2581392323010)
+
+Portifólio do André Flávio de Oliveira
 
 # Portfólio de Projetos - Fatec Jacareí
-### Aluno: Samuel Lucas Vieira de Melo
+
+### Aluno: André Flávio de Oliveira
+
 ### Curso: Desenvolvimento de Software Multiplataforma
-### Turma: 4°. Semestre de 2025
+
+### Turma: 2°. Semestre de 2023
